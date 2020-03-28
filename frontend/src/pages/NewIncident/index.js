@@ -1,114 +1,39 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { FiPower, FiTrash2 } from 'react-icons/fi';
-
-import logoImg from '../../assets/logo.svg';
+import { FiArrowLeft } from 'react-icons/fi';
 
 import './styles.css';
 
+import logoImg from '../../assets/logo.svg';
+
 export default function NewIncident() {
   return (
-    <div className="profile-container">
-      <header>
-        <img src={logoImg} alt="Be The Hero" />
-        <span>Bem vinda, APAD</span>
+    <div className="new-incident-container">
+      <div className="content">
+        <section>
+          <img src={logoImg} alt="Be The Hero" />
 
-        <Link className="button" to="/incidents/new">
-          Cadastrar novo caso
-        </Link>
-        <button type="button">
-          <FiPower size={18} color="#e02041"></FiPower>
-        </button>
-      </header>
+          <h1>Cadastrar novo caso</h1>
+          <p>
+            Descreva detalhadamente para encontrar um herói para resolver isso.
+          </p>
 
-      <h1>Casos Cadastrados</h1>
+          <Link className="back-link" to="/profile">
+            <FiArrowLeft size={16} color="#e02041" />
+            Voltar para Home
+          </Link>
+        </section>
 
-      <ul>
-        <li>
-          <strong>CASO:</strong>
-          <p>Caso teste</p>
+        <form>
+          <input placeholder="Título do Caso" />
+          <textarea placeholder="Descrição" />
+          <input placeholder="Valor em Reais(R$)" />
 
-          <strong>DESCRIÇÃO:</strong>
-          <p>Descrição teste</p>
-
-          <strong>VALOR:</strong>
-          <p>R$ 120,00</p>
-
-          <button type="button">
-            <FiTrash2 size={20} color="#a8a8b3"></FiTrash2>
+          <button className="button" type="submit">
+            Cadastrar
           </button>
-        </li>
-        <li>
-          <strong>CASO:</strong>
-          <p>Caso teste</p>
-
-          <strong>DESCRIÇÃO:</strong>
-          <p>Descrição teste</p>
-
-          <strong>VALOR:</strong>
-          <p>R$ 120,00</p>
-
-          <button type="button">
-            <FiTrash2 size={20} color="#a8a8b3"></FiTrash2>
-          </button>
-        </li>
-        <li>
-          <strong>CASO:</strong>
-          <p>Caso teste</p>
-
-          <strong>DESCRIÇÃO:</strong>
-          <p>Descrição teste</p>
-
-          <strong>VALOR:</strong>
-          <p>R$ 120,00</p>
-
-          <button type="button">
-            <FiTrash2 size={20} color="#a8a8b3"></FiTrash2>
-          </button>
-        </li>
-        <li>
-          <strong>CASO:</strong>
-          <p>Caso teste</p>
-
-          <strong>DESCRIÇÃO:</strong>
-          <p>Descrição teste</p>
-
-          <strong>VALOR:</strong>
-          <p>R$ 120,00</p>
-
-          <button type="button">
-            <FiTrash2 size={20} color="#a8a8b3"></FiTrash2>
-          </button>
-        </li>
-        <li>
-          <strong>CASO:</strong>
-          <p>Caso teste</p>
-
-          <strong>DESCRIÇÃO:</strong>
-          <p>Descrição teste</p>
-
-          <strong>VALOR:</strong>
-          <p>R$ 120,00</p>
-
-          <button type="button">
-            <FiTrash2 size={20} color="#a8a8b3"></FiTrash2>
-          </button>
-        </li>
-        <li>
-          <strong>CASO:</strong>
-          <p>Caso teste</p>
-
-          <strong>DESCRIÇÃO:</strong>
-          <p>Descrição teste</p>
-
-          <strong>VALOR:</strong>
-          <p>R$ 120,00</p>
-
-          <button type="button">
-            <FiTrash2 size={20} color="#a8a8b3"></FiTrash2>
-          </button>
-        </li>
-      </ul>
+        </form>
+      </div>
     </div>
   );
 }
