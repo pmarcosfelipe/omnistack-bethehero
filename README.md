@@ -1,6 +1,6 @@
 # :computer: Be The Hero
 
-Project create to develop an application, Web and Mobile, which aims to connect and facilitate people who are willing to help NGOs, who often need to raise money donations for an specific case.
+Project create to develop an application, Web and Mobile, which aims to connect and facilitate people who are willing and available to help NGOs, who often need to raise money donations for an specific case.
 
 Below we have the principal technologies used: <br>
 :heavy_check_mark: Node.js <br>
